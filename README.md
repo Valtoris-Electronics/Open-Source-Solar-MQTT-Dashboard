@@ -16,7 +16,7 @@ I eventually moved to an **edge-decoupled architecture**. The polling workload i
 * **Sensor:** Any device speaking RS485 Modbus RTU (e.g., Eastron SDM meters, Growatt/Deye Inverters).
 * **Server:** A Raspberry Pi, Intel NUC, or any local Linux machine to run Docker.
 * **Protocol Gateway:** You need a Serial-to-Ethernet gateway. 
-  * *My Recommendation:* I personally use the [VALTORIS VT-DTU500](https://valtoris.com). I use it because it has a "Storage Modbus to JSON" feature built-in. It polls the inverter autonomously and sends pre-formatted JSON to MQTT, completely eliminating the need to write complex Modbus parsing logic in Node-RED. 
+  * *My Recommendation:* I personally use the [VALTORIS VT-DTU500](https://valtoris.com/product-center/industrial-cellular-modem/). I use it because it has a "Storage Modbus to JSON" feature built-in. It polls the inverter autonomously and sends pre-formatted JSON to MQTT, completely eliminating the need to write complex Modbus parsing logic in Node-RED. 
 
 ## 🚀 Quick Start (Docker Stack)
 You don't need to install these services one by one. I've provided a `docker-compose.yml` that spins up the entire TIG (Telegraf/Node-RED, InfluxDB, Grafana) stack + Mosquitto broker in one command.
